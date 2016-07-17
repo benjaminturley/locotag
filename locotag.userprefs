@@ -1,8 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DragRigidbody2D.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ScriptableObjects\MakeScriptableObject.cs">
     <Files>
+      <File FileName="Assets\Scripts\MenuManager.cs" Line="6" Column="2" />
+      <File FileName="Assets\Scripts\TagManager.cs" Line="37" Column="4" />
+      <File FileName="Assets\Scripts\TagUI.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Rigidbody2DFreezeRotation.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\DragRigidbody2D.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\RotateInf.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ScriptableObjects\MakeScriptableObject.cs" Line="16" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

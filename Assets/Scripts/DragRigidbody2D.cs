@@ -8,6 +8,8 @@ public class DragRigidbody2D : MonoBehaviour
 	public float Drag = 10f;
 	public float AngularDrag = 5f;
 
+	public bool beingDragged = false;
+
 	private SpringJoint2D _springJoint;
 
 	private Camera _camera;
@@ -63,10 +65,13 @@ public class DragRigidbody2D : MonoBehaviour
 
 		while (Input.GetMouseButton(0))
 		{
+			beingDragged = true;
 			Vector2 newPos = _camera.ScreenToWorldPoint(Input.mousePosition);
 			_springJoint.transform.position = new Vector2(newPos.x, newPos.y);
 			yield return new WaitForSeconds(0.1f);
 		}
+
+		beingDragged = false;
 
 		if (_springJoint.connectedBody)
 		{
