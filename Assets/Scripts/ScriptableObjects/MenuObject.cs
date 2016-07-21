@@ -8,6 +8,6 @@ public class MenuObject : ScriptableObject
 
 	public void createMenuItem(string timeString, string dateString, float longitude, float latitude)
 	{
-		menuItems.Add(new MenuTag(timeString, dateString, longitude, latitude));
+		menuItems.Insert(0, new MenuTag(timeString, dateString, longitude, latitude));
 	}
 }

@@ -45,14 +45,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\DisableCanvasGroup.cs" />
      <Compile Include="Assets\Scripts\DragRigidbody2D.cs" />
      <Compile Include="Assets\Scripts\FadeInCanvasGroup.cs" />
+     <Compile Include="Assets\Scripts\GoToCoordsURL.cs" />
+     <Compile Include="Assets\Scripts\InfoTextManager.cs" />
      <Compile Include="Assets\Scripts\MenuManager.cs" />
      <Compile Include="Assets\Scripts\Rigidbody2DFreezeRotation.cs" />
      <Compile Include="Assets\Scripts\RotateInf.cs" />
+     <Compile Include="Assets\Scripts\SaveGameOnQuit.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\MakeScriptableObject.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\MenuObject.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\MenuTag.cs" />
+     <Compile Include="Assets\Scripts\SpawnWindowObject.cs" />
      <Compile Include="Assets\Scripts\TagManager.cs" />
      <Compile Include="Assets\Scripts\TagUI.cs" />
  <Reference Include="UnityEngine.UI">

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
 using System.Collections;
 
 [RequireComponent(typeof(DragRigidbody2D))]
@@ -7,11 +8,11 @@ using System.Collections;
 
 public class TagManager : MonoBehaviour 
 {
+	public Button[] buttonList;
 	public MenuManager mm;
 	public MenuObject menuObject;
 	public CanvasGroup spinner;
 	public CanvasGroup warningText;
-	public Text menuButton;
 	public AudioSource audioSource;
 	public Transform anchor;
 
@@ -24,7 +25,6 @@ public class TagManager : MonoBehaviour
 	private DragRigidbody2D dr;
 
 	private bool inMarker = false;
-	private bool menuIsOpen = false;
 
 	void Start () 
 	{
@@ -38,23 +38,19 @@ public class TagManager : MonoBehaviour
 		if (Input.GetMouseButtonUp (0) && dr.beingDragged && inMarker) 
 		{
 			playSound ();
-//			if (!(Input.location.status == LocationServiceStatus.Running)
-//			    && !(Input.location.status == LocationServiceStatus.Initializing))
-//				StartCoroutine ("StartLocationServices");
-//			else
+			if (!(Input.location.status == LocationServiceStatus.Running)
+			    && !(Input.location.status == LocationServiceStatus.Initializing))
+				StartCoroutine ("StartLocationServices");
+			else
 				menuObject.createMenuItem (tagUI.timeString, tagUI.shortDateString, tagUI.longitude, tagUI.latitude);
-
 		}
 
 		Vector3 anchorTemp = new Vector3 (anchor.position.x, anchorOriginY);
 
-		if (menuIsOpen)
-		{
+		if (dr.enabled == false)
 			anchorTemp = new Vector3 (anchor.position.x, anchorNewY);
-		}
 
 		anchor.position = Vector3.Lerp (anchor.position, anchorTemp, speed * Time.deltaTime);
-		
 	}
 
 	void playSound()
@@ -62,22 +58,32 @@ public class TagManager : MonoBehaviour
 		audioSource.Play ();
 	}
 
-	public void toggleTag()
+	public void toggleTag(string buttonName)
 	{
-		if (!menuIsOpen) {
-			menuIsOpen = true;
-			menuButton.text = "tap to return";
+		if (!dr.enabled == false) 
+		{
 			dr.enabled = false;
-			mm.createMenu ();
-		}
-
+			foreach (Button b in buttonList)
+				if (b.transform.name != buttonName)
+					b.interactable = false;
+		} 
 		else 
 		{
-			menuIsOpen = false;
-			menuButton.text = "tap for saved tags";
 			dr.enabled = true;
-			mm.destroyMenu ();
+			foreach (Button b in buttonList)
+					b.interactable = true;
 		}
+	}
+
+	public void toggleMenu(string buttonName)
+	{
+		if (!dr.enabled == false) 
+			mm.createMenu ();
+
+		else 
+			mm.destroyMenu ();
+
+		toggleTag (buttonName);
 	}
 
 	IEnumerator StartLocationServices()
@@ -101,7 +107,7 @@ public class TagManager : MonoBehaviour
 
 		if (Input.location.status == LocationServiceStatus.Running) 
 		{
-			StartCoroutine(blinkWarningText(1, "Running!", 2));
+			StartCoroutine(blinkWarningText(1, "Connected!", 2));
 		}
 
 		if (maxWait < 1)
