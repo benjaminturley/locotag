@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEditor;
 using System.Collections;
 
 [RequireComponent(typeof(DragRigidbody2D))]
@@ -10,7 +9,6 @@ public class TagManager : MonoBehaviour
 {
 	public Button[] buttonList;
 	public MenuManager mm;
-	public MenuObject menuObject;
 	public CanvasGroup spinner;
 	public CanvasGroup warningText;
 	public AudioSource audioSource;
@@ -42,7 +40,7 @@ public class TagManager : MonoBehaviour
 			    && !(Input.location.status == LocationServiceStatus.Initializing))
 				StartCoroutine ("StartLocationServices");
 			else
-				menuObject.createMenuItem (tagUI.timeString, tagUI.shortDateString, tagUI.longitude, tagUI.latitude);
+				mm.createMenuItem (tagUI.timeString, tagUI.shortDateString, tagUI.longitude, tagUI.latitude);
 		}
 
 		Vector3 anchorTemp = new Vector3 (anchor.position.x, anchorOriginY);

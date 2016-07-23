@@ -1,7 +1,11 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
+Project("{7D9C2EF1-E26E-B5D9-C79D-2DA3D79EB571}") = "locotag", "Assembly-CSharp-firstpass.csproj", "{9F9CADAE-8D5F-21E3-ECDC-337A2B7F03A3}"
+EndProject
 Project("{7D9C2EF1-E26E-B5D9-C79D-2DA3D79EB571}") = "locotag", "Assembly-CSharp.csproj", "{939C8FBE-2533-F91D-11C9-5A041BF61507}"
+EndProject
+Project("{7D9C2EF1-E26E-B5D9-C79D-2DA3D79EB571}") = "locotag", "Assembly-CSharp-Editor-firstpass.csproj", "{2CA76FF8-0F3A-C5AA-824E-B5151D40B348}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F9CADAE-8D5F-21E3-ECDC-337A2B7F03A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F9CADAE-8D5F-21E3-ECDC-337A2B7F03A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F9CADAE-8D5F-21E3-ECDC-337A2B7F03A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F9CADAE-8D5F-21E3-ECDC-337A2B7F03A3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{939C8FBE-2533-F91D-11C9-5A041BF61507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{939C8FBE-2533-F91D-11C9-5A041BF61507}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{939C8FBE-2533-F91D-11C9-5A041BF61507}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{939C8FBE-2533-F91D-11C9-5A041BF61507}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CA76FF8-0F3A-C5AA-824E-B5151D40B348}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CA76FF8-0F3A-C5AA-824E-B5151D40B348}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CA76FF8-0F3A-C5AA-824E-B5151D40B348}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CA76FF8-0F3A-C5AA-824E-B5151D40B348}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

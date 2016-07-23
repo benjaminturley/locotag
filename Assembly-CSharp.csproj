@@ -46,26 +46,41 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\DisableCanvasGroup.cs" />
+     <Compile Include="Assets\Scripts\DisplayAds.cs" />
      <Compile Include="Assets\Scripts\DragRigidbody2D.cs" />
      <Compile Include="Assets\Scripts\FadeInCanvasGroup.cs" />
      <Compile Include="Assets\Scripts\GoToCoordsURL.cs" />
      <Compile Include="Assets\Scripts\InfoTextManager.cs" />
      <Compile Include="Assets\Scripts\MenuManager.cs" />
+     <Compile Include="Assets\Scripts\MenuTag.cs" />
      <Compile Include="Assets\Scripts\Rigidbody2DFreezeRotation.cs" />
      <Compile Include="Assets\Scripts\RotateInf.cs" />
-     <Compile Include="Assets\Scripts\SaveGameOnQuit.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObjects\MakeScriptableObject.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObjects\MenuObject.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObjects\MenuTag.cs" />
      <Compile Include="Assets\Scripts\SpawnWindowObject.cs" />
      <Compile Include="Assets\Scripts\TagManager.cs" />
      <Compile Include="Assets\Scripts\TagUI.cs" />
+     <None Include="Assets\Plugins\Android\unityads\res\layout\unityads_view_video_play.xml" />
+     <None Include="Assets\Plugins\Android\unityads\proguard-project.txt" />
+     <None Include="Assets\Plugins\Android\unityads\build.xml" />
+     <None Include="Assets\Plugins\Android\unityads\res\layout\unityads_button_audio_toggle.xml" />
+     <None Include="Assets\Plugins\Android\unityads\res\drawable\unityads_background_button_pause.xml" />
+     <None Include="Assets\Plugins\Android\unityads\res\drawable\unityads_icon_speaker_triangle.xml" />
+     <None Include="Assets\Plugins\Android\unityads\res\values\strings.xml" />
+     <None Include="Assets\Plugins\Android\unityads\res\drawable\unityads_icon_speaker_waves.xml" />
+     <None Include="Assets\Plugins\Android\unityads\res\drawable\unityads_icon_speaker_base.xml" />
+     <None Include="Assets\Plugins\Android\unityads\res\drawable\unityads_icon_play.xml" />
+     <None Include="Assets\Plugins\Android\unityads\res\layout\unityads_button_pause.xml" />
+     <None Include="Assets\Plugins\Android\unityads\res\layout\unityads_view_video_paused.xml" />
+     <None Include="Assets\Plugins\Android\unityads\AndroidManifest.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{9F9CADAE-8D5F-21E3-ECDC-337A2B7F03A3}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
