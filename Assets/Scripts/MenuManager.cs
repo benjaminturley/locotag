@@ -11,7 +11,7 @@ public class MenuManager : MonoBehaviour
 	public GameObject itemPrefab;
 	public float stagger;
 
-	public static List<MenuTag> menuTags = new List<MenuTag>();
+	public List<MenuTag> menuTags = new List<MenuTag>();
 
 	public void Start()
 	{
@@ -60,12 +60,13 @@ public class MenuManager : MonoBehaviour
 					child.GetComponent<Text> ().text = mt.getDate();
 				if (child.name == "Time")
 					child.GetComponent<Text> ().text = mt.getTime();
-				if (child.name == "Longitude")
-					child.GetComponent<Text> ().text = ""+mt.getLongitude()+",";
 				if (child.name == "Latitude")
-					child.GetComponent<Text> ().text = ""+mt.getLatitude();
+					child.GetComponent<Text> ().text = ""+mt.getLatitude ()+",";
+				if (child.name == "Longitude")
+					child.GetComponent<Text> ().text = ""+mt.getLongitude ();
 			}
 
+			item.GetComponent<SendToWindowManager> ().mt = menuTags [i];
 			item.GetComponent<FadeInCanvasGroup> ().delay = (float)i / stagger;
 			item.transform.SetParent (menuUIParent);
 			item.transform.localScale = new Vector3 (1, 1, 1);

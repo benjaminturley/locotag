@@ -1,9 +1,17 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TagManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TagUI.cs">
     <Files>
-      <File FileName="Assets\Scripts\MenuManager.cs" Line="22" Column="17" />
-      <File FileName="Assets\Scripts\TagManager.cs" Line="3" Column="1" />
+      <File FileName="Assets\Scripts\DeleteTag.cs" Line="13" Column="20" />
+      <File FileName="Assets\Scripts\SendToWindowManager.cs" Line="16" Column="22" />
+      <File FileName="Assets\Scripts\WindowManager.cs" Line="31" Column="1" />
+      <File FileName="Assets\Scripts\MenuManager.cs" Line="66" Column="63" />
+      <File FileName="Assets\Scripts\TagManager.cs" Line="42" Column="8" />
+      <File FileName="Assets\Scripts\MenuTag.cs" Line="7" Column="1" />
+      <File FileName="Assets\Scripts\TagUI.cs" Line="50" Column="8" />
+      <File FileName="Assets\Scripts\GoToCoordsURL.cs" Line="11" Column="39" />
+      <File FileName="Assets\Scripts\InfoTextManager.cs" Line="35" Column="22" />
+      <File FileName="Assets\Scripts\RandomizeText.cs" Line="11" Column="72" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

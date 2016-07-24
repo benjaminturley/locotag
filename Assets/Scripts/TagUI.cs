@@ -24,8 +24,8 @@ public class TagUI : MonoBehaviour
 
 	void Update ()
 	{
+		latitude = Input.location.lastData.latitude;
 		longitude = Input.location.lastData.longitude;
-		longitude = Input.location.lastData.latitude;
 
 		timeString = DateTime.Now.ToString ("h:mm tt");
 		dateString = DateTime.Now.ToString ("D");
@@ -49,7 +49,7 @@ public class TagUI : MonoBehaviour
 		
 		else 
 		{
-			coordsText.text = ""+latitude+", "+longitude;
+			coordsText.text = latitude+", "+longitude;
 			pullText.text = "pull to tag";
 		}
 	}
